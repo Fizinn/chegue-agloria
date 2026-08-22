@@ -1,0 +1,277 @@
+{
+  "generated_at": "2026-08-21T01:04:41.371Z",
+  "source": "src/lib/overallManual.ts",
+  "total_entries": 1043,
+  "linked": 1000,
+  "ambiguous": 1,
+  "unresolved": 41,
+  "invalid": 0,
+  "ambiguous_entries": [
+    {
+      "year": 2002,
+      "name": "Ricardo",
+      "overall": 90,
+      "candidates": [
+        {
+          "player_id": "P-45039",
+          "player_name": "Ricardo",
+          "team": "Espanha"
+        },
+        {
+          "player_id": "P-45712",
+          "player_name": "Ricardo",
+          "team": "Portugal"
+        }
+      ]
+    }
+  ],
+  "unresolved_entries": [
+    {
+      "year": 1930,
+      "name": "Oswaldo Gomes",
+      "overall": 78,
+      "reason": "nenhuma correspondência exata e segura na mesma Copa."
+    },
+    {
+      "year": 1934,
+      "name": "Leopoldo Conti",
+      "overall": 85,
+      "reason": "nenhuma correspondência exata e segura na mesma Copa."
+    },
+    {
+      "year": 1934,
+      "name": "Eduardo González Valiño",
+      "overall": 84,
+      "reason": "nenhuma correspondência exata e segura na mesma Copa."
+    },
+    {
+      "year": 1938,
+      "name": "Annibale Frossi",
+      "overall": 88,
+      "reason": "nenhuma correspondência exata e segura na mesma Copa."
+    },
+    {
+      "year": 1958,
+      "name": "Werner Mai",
+      "overall": 85,
+      "reason": "nenhuma correspondência exata e segura na mesma Copa."
+    },
+    {
+      "year": 1998,
+      "name": "Henrik Andersen",
+      "overall": 86,
+      "reason": "nenhuma correspondência exata e segura na mesma Copa."
+    },
+    {
+      "year": 1998,
+      "name": "Gaizka Mendieta Zabala",
+      "overall": 90,
+      "reason": "nenhuma correspondência exata e segura na mesma Copa."
+    },
+    {
+      "year": 2002,
+      "name": "Claudio Miguel Pizarro Bosio",
+      "overall": 87,
+      "reason": "nenhuma correspondência exata e segura na mesma Copa."
+    },
+    {
+      "year": 2002,
+      "name": "Abel Fernando Moreira Ferreira",
+      "overall": 87,
+      "reason": "nenhuma correspondência exata e segura na mesma Copa."
+    },
+    {
+      "year": 2002,
+      "name": "Nuno Miguel Ribeiro de Oliveira Valente",
+      "overall": 88,
+      "reason": "nenhuma correspondência exata e segura na mesma Copa."
+    },
+    {
+      "year": 2002,
+      "name": "Pedro Miguel Carreiro Resendes",
+      "overall": 90,
+      "reason": "nenhuma correspondência exata e segura na mesma Copa."
+    },
+    {
+      "year": 2002,
+      "name": "Delio César Toledo",
+      "overall": 87,
+      "reason": "nenhuma correspondência exata e segura na mesma Copa."
+    },
+    {
+      "year": 2002,
+      "name": "Duilio César Davino Rodríguez",
+      "overall": 86,
+      "reason": "nenhuma correspondência exata e segura na mesma Copa."
+    },
+    {
+      "year": 2002,
+      "name": "Pável Pardo Segura",
+      "overall": 88,
+      "reason": "nenhuma correspondência exata e segura na mesma Copa."
+    },
+    {
+      "year": 2002,
+      "name": "Ogün Temizkanoğlu",
+      "overall": 87,
+      "reason": "nenhuma correspondência exata e segura na mesma Copa."
+    },
+    {
+      "year": 2002,
+      "name": "Oğuz Çetin",
+      "overall": 88,
+      "reason": "nenhuma correspondência exata e segura na mesma Copa."
+    },
+    {
+      "year": 2002,
+      "name": "Sergen Yalçın",
+      "overall": 87,
+      "reason": "nenhuma correspondência exata e segura na mesma Copa."
+    },
+    {
+      "year": 2006,
+      "name": "Patrice Evra",
+      "overall": 87,
+      "reason": "nenhuma correspondência exata e segura na mesma Copa."
+    },
+    {
+      "year": 2026,
+      "name": "Danilo dos Santos de Oliveira",
+      "overall": 87,
+      "reason": "2026 requer associação explícita por player_id."
+    },
+    {
+      "year": 2026,
+      "name": "Carlos Henrique Casimiro",
+      "overall": 94,
+      "reason": "2026 requer associação explícita por player_id."
+    },
+    {
+      "year": 2026,
+      "name": "Ángel Fabián Di María",
+      "overall": 90,
+      "reason": "2026 requer associação explícita por player_id."
+    },
+    {
+      "year": 2026,
+      "name": "Hugo Hadrien Lloris",
+      "overall": 92,
+      "reason": "2026 requer associação explícita por player_id."
+    },
+    {
+      "year": 2026,
+      "name": "Eduardo Camavinga",
+      "overall": 91,
+      "reason": "2026 requer associação explícita por player_id."
+    },
+    {
+      "year": 2026,
+      "name": "Antoine Griezmann",
+      "overall": 95,
+      "reason": "2026 requer associação explícita por player_id."
+    },
+    {
+      "year": 2026,
+      "name": "Marc-André ter Stegen",
+      "overall": 93,
+      "reason": "2026 requer associação explícita por player_id."
+    },
+    {
+      "year": 2026,
+      "name": "İlkay Gündoğan",
+      "overall": 91,
+      "reason": "2026 requer associação explícita por player_id."
+    },
+    {
+      "year": 2026,
+      "name": "Serge Gnabry",
+      "overall": 90,
+      "reason": "2026 requer associação explícita por player_id."
+    },
+    {
+      "year": 2026,
+      "name": "Pedro González López",
+      "overall": 91,
+      "reason": "2026 requer associação explícita por player_id."
+    },
+    {
+      "year": 2026,
+      "name": "Robin Le Normand",
+      "overall": 91,
+      "reason": "2026 requer associação explícita por player_id."
+    },
+    {
+      "year": 2026,
+      "name": "Pau Francisco Torres",
+      "overall": 90,
+      "reason": "2026 requer associação explícita por player_id."
+    },
+    {
+      "year": 2026,
+      "name": "Álvaro Morata Martín",
+      "overall": 90,
+      "reason": "2026 requer associação explícita por player_id."
+    },
+    {
+      "year": 2026,
+      "name": "Trent John Alexander-Arnold",
+      "overall": 94,
+      "reason": "2026 requer associação explícita por player_id."
+    },
+    {
+      "year": 2026,
+      "name": "Lewis Hall",
+      "overall": 88,
+      "reason": "2026 requer associação explícita por player_id."
+    },
+    {
+      "year": 2026,
+      "name": "Phil Foden",
+      "overall": 96,
+      "reason": "2026 requer associação explícita por player_id."
+    },
+    {
+      "year": 2026,
+      "name": "António João Tavares Silva",
+      "overall": 90,
+      "reason": "2026 requer associação explícita por player_id."
+    },
+    {
+      "year": 2026,
+      "name": "Raphaël Adelino José Guerreiro",
+      "overall": 88,
+      "reason": "2026 requer associação explícita por player_id."
+    },
+    {
+      "year": 2026,
+      "name": "João Maria Lobo Alves Palhinha Gonçalves",
+      "overall": 91,
+      "reason": "2026 requer associação explícita por player_id."
+    },
+    {
+      "year": 2026,
+      "name": "Matthijs de Ligt",
+      "overall": 91,
+      "reason": "2026 requer associação explícita por player_id."
+    },
+    {
+      "year": 2026,
+      "name": "Xavi Quentin Shay Simons",
+      "overall": 93,
+      "reason": "2026 requer associação explícita por player_id."
+    },
+    {
+      "year": 2026,
+      "name": "Jeremie Agyekum Frimpong",
+      "overall": 91,
+      "reason": "2026 requer associação explícita por player_id."
+    },
+    {
+      "year": 2026,
+      "name": "Luis Alberto Suárez Díaz",
+      "overall": 90,
+      "reason": "2026 requer associação explícita por player_id."
+    }
+  ],
+  "invalid_entries": []
+}

@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* modo claro (padrão) */
+  --cor-paper: 243 237 222; /* #F3EDDE */
+  --cor-card: 255 253 248; /* #FFFDF8 */
+  --cor-ink: 43 38 32; /* #2B2620 */
+  --cor-pitch: 46 125 79; /* #2E7D4F */
+  --cor-pitch-dark: 37 98 62; /* #25623E */
+  --cor-pitch-line: 243 237 222;
+  --cor-brand: 196 67 43; /* #C4432B */
+  --cor-brand-dark: 165 52 31; /* #A5341F */
+  --cor-gold: 212 165 55; /* #D4A537 */
+}
+
+.dark {
+  --cor-paper: 15 20 17; /* fundo bem escuro, meio verde-petróleo */
+  --cor-card: 22 29 25;
+  --cor-ink: 224 228 220; /* texto claro */
+  --cor-pitch: 34 110 68;
+  --cor-pitch-dark: 18 58 36;
+  --cor-pitch-line: 246 243 232;
+  --cor-brand: 224 96 68;
+  --cor-brand-dark: 190 74 50;
+  --cor-gold: 230 190 90;
+}
+
+body {
+  background-color: rgb(var(--cor-paper));
+  background-image: radial-gradient(
+      circle at 1px 1px,
+      rgba(128, 128, 128, 0.08) 1px,
+      transparent 0
+    );
+  background-size: 22px 22px;
+  color: rgb(var(--cor-ink));
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.field-lines {
+  background-image: repeating-linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.05) 0px,
+    rgba(255, 255, 255, 0.05) 48px,
+    transparent 48px,
+    transparent 96px
+  );
+}
+
+
+/* Elementos do campo precisam continuar legíveis também no tema escuro. */
+.field-position-label {
+  color: #fff !important;
+  background-color: rgb(0 0 0 / 0.72);
+  text-shadow: 0 1px 2px rgb(0 0 0 / 0.8);
+}
+
+.dark .field-lines {
+  opacity: 0.75;
+}

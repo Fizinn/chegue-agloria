@@ -1,0 +1,10 @@
+{
+  "jogadores_copa": 12221,
+  "overalls_ja_associados_no_projeto": 905,
+  "sem_overall": 11316,
+  "anos": [
+    1930,
+    2026
+  ],
+  "observacao": "O cruzamento estrutural foi feito por ano + sourcePlayerId. A base FIFA 2005-2020 do GitHub encontrada possui 59,8 MB e a base FC26 possui mais de 18 mil jogadores. Neste ambiente, o arquivo bruto do GitHub não pôde ser baixado para execução local; portanto nenhum Overall FIFA foi inventado ou atribuído como se viesse do GitHub."
+}
