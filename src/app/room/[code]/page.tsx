@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { useGameStore } from "@/store/useGameStore";
 import { Formacao, NOMES_FORMACAO } from "@/lib/formacoes";
@@ -102,7 +103,7 @@ export default function LobbySalaPage() {
       <main className="mx-auto flex min-h-screen max-w-md flex-col items-center justify-center gap-4 px-6 text-center">
         <h1 className="font-display text-2xl">Sala {codigo} não encontrada</h1>
         <p className="text-sm text-ink/60">{erro}</p>
-        <a href="/room/join" className="text-brand underline">Tentar outro código</a>
+        <Link href="/room/join" className="text-brand underline">Tentar outro código</Link>
       </main>
     );
   }

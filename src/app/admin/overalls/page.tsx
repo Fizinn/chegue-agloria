@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
 import { BotaoTema } from "@/components/BotaoTema";
 import {
   ELENCOS_REAIS,
@@ -348,7 +349,7 @@ export default function AdminOverallsPage() {
           <BotaoTema />
         </div>
         <div className="rounded-card border border-ink/10 bg-card p-7 shadow-card">
-          <a href="/" className="text-sm text-ink/50 hover:text-ink">← voltar</a>
+          <Link href="/" className="text-sm text-ink/50 hover:text-ink">← voltar</Link>
           <div className="mt-7 text-center">
             <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-brand/10 text-2xl">🔐</div>
             <h1 className="mt-4 font-display text-3xl">Área administrativa</h1>
@@ -375,7 +376,7 @@ export default function AdminOverallsPage() {
       <div className="fixed right-4 top-4"><BotaoTema /></div>
 
       <header className="mb-6">
-        <a href="/" className="text-sm text-ink/50 hover:text-ink">← voltar ao jogo</a>
+        <Link href="/" className="text-sm text-ink/50 hover:text-ink">← voltar ao jogo</Link>
         <div className="mt-3 flex flex-wrap items-end justify-between gap-4">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-brand">admin</p>

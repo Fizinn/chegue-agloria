@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useGameStore } from "@/store/useGameStore";
 import { ConfiguracaoSala, ModoSala } from "@/types/game";
@@ -132,9 +133,9 @@ export default function CriarSalaPage() {
 
       <p className="text-center text-sm text-ink/50">
         Já tem um código?{" "}
-        <a href="/room/join" className="font-semibold text-brand underline">
+        <Link href="/room/join" className="font-semibold text-brand underline">
           Entrar em uma sala
-        </a>
+        </Link>
       </p>
     </main>
   );

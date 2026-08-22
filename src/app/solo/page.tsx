@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Campo } from "@/components/Campo";
 import { Banco } from "@/components/Banco";
@@ -102,9 +103,9 @@ export default function SoloPage() {
       <main className="mx-auto flex min-h-screen max-w-lg flex-col justify-center gap-6 px-6 py-10">
         <header className="flex items-start justify-between">
           <div>
-            <a href="/" className="text-sm text-ink/50 hover:text-ink">
+            <Link href="/" className="text-sm text-ink/50 hover:text-ink">
               ← voltar
-            </a>
+            </Link>
             <h1 className="mt-2 font-display text-3xl">Antes de começar</h1>
           </div>
           <BotaoTema />
