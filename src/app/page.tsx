@@ -12,7 +12,7 @@ export default function HomePage() {
           monte seu time · sorteie uma seleção · vença o mata-mata
         </p>
         <h1 className="font-display text-6xl font-semibold leading-none text-ink">
-          Sete a Zero
+          Chegue a Glória
         </h1>
       </div>
 

@@ -194,14 +194,14 @@ export function Torneio({
       const novoSaldo = saldoGrupo + resultado.golsCasa - resultado.golsFora;
       setPontosGrupo(novoPontos);
       setSaldoGrupo(novoSaldo);
-      if (jogoGrupo < 2) {
+      if (jogoGrupo < 3) {
         setJogoGrupo((v) => v + 1);
         setStatus("resultado");
         return;
       }
-      // Três jogos: 4+ pontos classifica. Com 3 pontos, saldo não-negativo
+      // Quatro jogos: 5+ pontos classifica. Com 4 pontos, saldo não-negativo
       // desempata; isso mantém a fase competitiva sem eliminar por uma derrota isolada.
-      const classificou = novoPontos >= 4 || (novoPontos === 3 && novoSaldo >= 0);
+      const classificou = novoPontos >= 5 || (novoPontos === 4 && novoSaldo >= 0);
       if (!classificou) {
         setCampeao(false);
         setStatus("eliminado");
@@ -299,7 +299,7 @@ export function Torneio({
       ) : (
         <>
           <div className={`grid gap-2 ${solo ? "grid-cols-3 sm:grid-cols-6" : "grid-cols-4"}`}>{fases.map((fase, i) => <div key={fase} className={`rounded-lg border px-1 py-2 text-center text-[9px] font-semibold uppercase ${i < rodada ? "border-pitch bg-pitch/10 text-pitch" : i === rodada ? "border-brand bg-brand/10 text-brand" : "border-ink/10 text-ink/30"}`}>{fasesCurtas[i]}</div>)}</div>
-          {solo && rodada === 0 && <div className="rounded-lg border border-ink/10 bg-card px-3 py-2 text-center text-xs text-ink/60">Fase de grupos · jogo {jogoGrupo + 1}/3 · <strong>{pontosGrupo} pts</strong> · saldo {saldoGrupo >= 0 ? "+" : ""}{saldoGrupo}</div>}
+          {solo && rodada === 0 && <div className="rounded-lg border border-ink/10 bg-card px-3 py-2 text-center text-xs text-ink/60">Fase de grupos · jogo {jogoGrupo + 1}/4 · <strong>{pontosGrupo} pts</strong> · saldo {saldoGrupo >= 0 ? "+" : ""}{saldoGrupo}</div>}
           <div>
             <p className="mb-2 text-center text-xs uppercase tracking-wide text-ink/50">{solo && rodada === 0 ? `Fase de Grupos · Jogo ${jogoGrupo + 1}` : fases[rodada]} — {nomeTime} <span className="text-ink/40">vs</span> {adversario.nome}{adversario.real && <span className="ml-2 rounded bg-brand/10 px-1.5 py-0.5 text-[10px] font-semibold text-brand">jogador real</span>}</p>
             {status === "aguardando" && (
@@ -329,7 +329,7 @@ export function Torneio({
               )
             )}
             {status === "jogando" && <PartidaAoVivo nomeCasa={nomeTime} nomeFora={adversario.nome} forcaCasa={forcaJogador} forcaFora={adversario.forca} estilo={estilo} rodada={rodada + jogoGrupo + 1} velocidade={velocidade} slots={slots} titularesIniciais={titulares} reservasIniciais={reservas} jogadoresFora={adversario.jogadores} onFinal={onFinalPartida} />}
-            {status === "resultado" && ultimoResultado && <div className="rounded-card border border-ink/10 bg-card p-6 text-center shadow-card"><p className="mb-1 font-display text-4xl">{ultimoResultado.golsCasa} - {ultimoResultado.golsFora}</p>{ultimoResultado.penaltis && <p className="mb-2 text-xs text-ink/50">Pênaltis: {ultimoResultado.penaltis.casa} - {ultimoResultado.penaltis.fora}</p>}{solo && rodada === 0 && jogoGrupo < 2 ? <><p className="mb-4 font-semibold text-pitch">Próximo jogo da fase de grupos.</p><button onClick={() => { setUltimoResultado(null); setStatus("aguardando"); }} className="rounded-lg bg-pitch px-6 py-3 font-semibold text-card">Próximo jogo →</button></> : solo && rodada === 0 ? <><p className="mb-2 font-semibold text-pitch">Classificado para os 16 avos!</p><p className="mb-4 text-xs text-ink/50">{pontosGrupo} ponto(s), saldo {saldoGrupo >= 0 ? "+" : ""}{saldoGrupo}.</p><button onClick={avancar} className="rounded-lg bg-brand px-6 py-3 font-semibold text-card">Ir para os 16 avos →</button></> : <><p className="mb-4 font-semibold text-pitch">Você venceu! Avançando de fase.</p><button onClick={avancar} className="rounded-lg bg-pitch px-6 py-3 font-semibold text-card">Próxima fase →</button></>}</div>}
+            {status === "resultado" && ultimoResultado && <div className="rounded-card border border-ink/10 bg-card p-6 text-center shadow-card"><p className="mb-1 font-display text-4xl">{ultimoResultado.golsCasa} - {ultimoResultado.golsFora}</p>{ultimoResultado.penaltis && <p className="mb-2 text-xs text-ink/50">Pênaltis: {ultimoResultado.penaltis.casa} - {ultimoResultado.penaltis.fora}</p>}{solo && rodada === 0 && jogoGrupo < 3 ? <><p className="mb-4 font-semibold text-pitch">Próximo jogo da fase de grupos.</p><button onClick={() => { setUltimoResultado(null); setStatus("aguardando"); }} className="rounded-lg bg-pitch px-6 py-3 font-semibold text-card">Próximo jogo →</button></> : solo && rodada === 0 ? <><p className="mb-2 font-semibold text-pitch">Classificado para os 16 avos!</p><p className="mb-4 text-xs text-ink/50">{pontosGrupo} ponto(s), saldo {saldoGrupo >= 0 ? "+" : ""}{saldoGrupo}.</p><button onClick={avancar} className="rounded-lg bg-brand px-6 py-3 font-semibold text-card">Ir para os 16 avos →</button></> : <><p className="mb-4 font-semibold text-pitch">Você venceu! Avançando de fase.</p><button onClick={avancar} className="rounded-lg bg-pitch px-6 py-3 font-semibold text-card">Próxima fase →</button></>}</div>}
           </div>
         </>
       )}

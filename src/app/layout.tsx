@@ -4,7 +4,7 @@ import { OverallOverridesProvider } from "@/components/OverallOverridesProvider"
 import { AdminOverallButton } from "@/components/AdminOverallButton";
 
 export const metadata: Metadata = {
-  title: "Sete a Zero",
+  title: "Chegue a Glória",
   description: "Monte seu time, sorteie uma seleção e dispute o mata-mata.",
 };
 
