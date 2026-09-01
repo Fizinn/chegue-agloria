@@ -1,0 +1,6 @@
+src/store/useGameStore.ts
+src/app/room/[code]/page.tsx
+src/app/room/[code]/jogar/page.tsx
+src/app/copa/page.tsx
+src/components/WorldCupBracket.tsx
+src/types/game.ts

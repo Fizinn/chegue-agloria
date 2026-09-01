@@ -1,0 +1,8 @@
+node_modules
+.next
+.env.local
+*.zip
+*.tsbuildinfo
+sete-a-zero/
+*.tsbuildinfo
+*.patch

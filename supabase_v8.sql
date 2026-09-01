@@ -1,0 +1,1 @@
+alter table sala_jogadores add column if not exists aguardando boolean default false;

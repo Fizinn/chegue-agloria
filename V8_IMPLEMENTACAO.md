@@ -1,0 +1,1 @@
+V8: aguardando+ver meu time, copa única, ordem fixa das posições, posições resumidas (MEI/CA+1), novo Box Score e IA histórica.

@@ -1,0 +1,2 @@
+-- V8.2.1 usa Supabase Realtime Presence para sincronizar quem terminou.
+-- Nenhuma alteração obrigatória de schema é necessária.
