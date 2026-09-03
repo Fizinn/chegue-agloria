@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { ElencoSelecao, JogadorReal } from "@/lib/squads";
 import { SlotFormacao } from "@/lib/formacoes";
 import { PosicaoAmpla } from "@/types/game";
-import { EstiloJogo, ResultadoPartida, VelocidadeJogo, NOMES_VELOCIDADE, forcaElencoAleatorio } from "@/lib/simulacao";
+import { DIFICULDADE_BOT, EstiloJogo, ResultadoPartida, VelocidadeJogo, NOMES_VELOCIDADE, forcaElencoAleatorio } from "@/lib/simulacao";
 import { seedDaPartida } from "@/lib/rng";
 import { simularPartidaCompletaDeterministica, TipoEventoDeterministico } from "@/lib/simulacaoDeterministica";
 import { Evento, EventoResultadoDeterministico, PartidaAoVivo, ResultadoDeterministico } from "@/components/PartidaAoVivo";
@@ -402,7 +402,7 @@ export function Torneio({
                 </div>
               )
             )}
-            {status === "jogando" && <PartidaAoVivo nomeCasa={nomeTime} nomeFora={adversario.nome} forcaCasa={forcaJogador} forcaFora={adversario.forca} estilo={estilo} rodada={rodada + jogoGrupo + 1} velocidade={velocidade} slots={slots} titularesIniciais={titulares} reservasIniciais={reservas} jogadoresFora={adversario.jogadores} onFinal={onFinalPartida} resultadoDeterministico={resultadoDeterministico} />}
+            {status === "jogando" && <PartidaAoVivo nomeCasa={nomeTime} nomeFora={adversario.nome} forcaCasa={forcaJogador} forcaFora={adversario.forca} estilo={estilo} rodada={rodada + jogoGrupo + 1} velocidade={velocidade} slots={slots} titularesIniciais={titulares} reservasIniciais={reservas} jogadoresFora={adversario.jogadores} onFinal={onFinalPartida} resultadoDeterministico={resultadoDeterministico} dificuldade={DIFICULDADE_BOT} />}
             {status === "resultado" && ultimoResultado && <div className="rounded-card border border-ink/10 bg-card p-6 text-center shadow-card"><p className="mb-1 font-display text-4xl">{ultimoResultado.golsCasa} - {ultimoResultado.golsFora}</p>{ultimoResultado.penaltis && <p className="mb-2 text-xs text-ink/50">Pênaltis: {ultimoResultado.penaltis.casa} - {ultimoResultado.penaltis.fora}</p>}{solo && rodada === 0 && jogoGrupo < 3 ? <><p className="mb-4 font-semibold text-pitch">Próximo jogo da fase de grupos.</p><button onClick={() => { setUltimoResultado(null); setStatus("aguardando"); }} className="rounded-lg bg-pitch px-6 py-3 font-semibold text-card">Próximo jogo →</button></> : solo && rodada === 0 ? <><p className="mb-2 font-semibold text-pitch">Classificado para os 16 avos!</p><p className="mb-4 text-xs text-ink/50">{pontosGrupo} ponto(s), saldo {saldoGrupo >= 0 ? "+" : ""}{saldoGrupo}.</p><button onClick={avancar} className="rounded-lg bg-brand px-6 py-3 font-semibold text-card">Ir para os 16 avos →</button></> : <><p className="mb-4 font-semibold text-pitch">Você venceu! Avançando de fase.</p><button onClick={avancar} className="rounded-lg bg-pitch px-6 py-3 font-semibold text-card">Próxima fase →</button></>}</div>}
           </div>
         </>

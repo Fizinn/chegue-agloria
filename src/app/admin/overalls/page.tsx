@@ -28,8 +28,6 @@ type Pending = {
   candidates?: Array<{ player_id: string; player_name: string; team?: string }>;
 };
 
-const PIN_PADRAO = "0707";
-
 function playerKey(jogador: JogadorReal) {
   return String(jogador.sourcePlayerId ?? jogador.id);
 }
@@ -215,11 +213,7 @@ export default function AdminOverallsPage() {
     });
 
     if (!resposta.ok) {
-      setErroLogin(
-        `PIN incorreto. ${
-          process.env.NODE_ENV !== "production" ? `(PIN padrão: ${PIN_PADRAO})` : ""
-        }`,
-      );
+      setErroLogin("PIN incorreto.");
       return;
     }
 

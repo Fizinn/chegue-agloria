@@ -62,6 +62,10 @@ interface PartidaAoVivoProps {
    * placar e os eventos vêm prontos e determinísticos, em vez de sorteados
    * localmente (ver comentário no tipo acima). */
   resultadoDeterministico?: ResultadoDeterministico;
+  /** Multiplicador de dificuldade (ver DIFICULDADE_BOT em simulacao.ts).
+   * Só se aplica quando NÃO há resultadoDeterministico — partida contra
+   * jogador real ignora isso, o placar já vem pronto e simétrico. */
+  dificuldade?: number;
 }
 
 type Fase = "jogando" | "intervalo" | "penaltis-ordem" | "penaltis" | "fim";
@@ -123,10 +127,11 @@ export function PartidaAoVivo({
   jogadoresFora,
   onFinal,
   resultadoDeterministico,
+  dificuldade = 1,
 }: PartidaAoVivoProps) {
   const { mediaCasa, mediaFora } = useMemo(
-    () => expectativaGols(forcaCasa, forcaFora, estilo, rodada),
-    [forcaCasa, forcaFora, estilo, rodada],
+    () => expectativaGols(forcaCasa, forcaFora, estilo, rodada, dificuldade),
+    [forcaCasa, forcaFora, estilo, rodada, dificuldade],
   );
 
   // Cada partida tem uma "intensidade" própria sorteada uma vez — jogos

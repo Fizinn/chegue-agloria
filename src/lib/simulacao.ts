@@ -145,11 +145,20 @@ export interface ExpectativaGols {
   mediaFora: number;
 }
 
+// Multiplica a dificuldade contra as seleções (bots) da Copa — não mexe em
+// partidas jogador-vs-jogador, onde "mais difícil" não faz sentido (os dois
+// lados sofreriam igual, então na prática não mudaria nada a não ser deixar
+// tudo mais aleatório). Reduz meu ataque e reforça o do adversário na mesma
+// proporção: com um time mediano fica beirando o impossível vencer; com um
+// time muito acima da média ainda dá pra vencer, só que raro.
+export const DIFICULDADE_BOT = 3;
+
 export function expectativaGols(
   forcaCasa: number,
   forcaFora: number,
   estilo: EstiloJogo,
   rodada: number,
+  dificuldade: number = 1,
 ): ExpectativaGols {
   const bonusEstiloAtaque =
     estilo === "ofensivo" ? 0.35 : estilo === "defensivo" ? -0.2 : 0.05;
@@ -157,8 +166,10 @@ export function expectativaGols(
     estilo === "defensivo" ? -0.25 : estilo === "ofensivo" ? 0.25 : 0;
 
   const diff = (forcaCasa - forcaFora) / 12;
-  const mediaCasa = Math.max(0.3, 1.35 + diff + bonusEstiloAtaque);
-  const mediaFora = Math.max(0.3, 1.1 - diff + bonusEstiloDefesa + rodada * 0.05);
+  const baseCasa = 1.35 + diff + bonusEstiloAtaque;
+  const baseFora = 1.1 - diff + bonusEstiloDefesa + rodada * 0.05;
+  const mediaCasa = Math.max(0.15, baseCasa / dificuldade);
+  const mediaFora = Math.max(0.3, baseFora * dificuldade);
   return { mediaCasa, mediaFora };
 }
 
